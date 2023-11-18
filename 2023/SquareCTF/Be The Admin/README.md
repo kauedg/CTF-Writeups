@@ -8,12 +8,15 @@ http://184.72.87.9:8012
 
 **Write-up**  
 Very simple web challenge. 
-
-The main page shows links that take to each user's "profile" page. When first requesting the server you are given a `Set-Cookie` header:
-
+  
+The main page shows links that take to each user's "profile" page.  
+<img src="./images/index.png" alt="index page"/>  
+<img src="./images/participant.png" alt="participant profile"/><img src="./images/admin.png" alt="admin profile"/>
+  
+When first requesting the server you are given a `Set-Cookie` header:  
+<img src="./images/setcookie.png" alt="request headers"/>  
 
 By base64 decoding it...
-
 ```
 $ echo -n "Q1RGIFBhcnRpY2lwYW50" | base64 -d
 CTF Participant
